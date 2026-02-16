@@ -27,7 +27,7 @@ class ProductCategoryWidgetToProductCategoryStorageClientBridge implements Produ
      * @param string $localeName
      * @param string $storeName
      *
-     * @return list<\Generated\Shared\Transfer\ProductAbstractCategoryStorageTransfer>
+     * @return array<\Generated\Shared\Transfer\ProductAbstractCategoryStorageTransfer>
      */
     public function findBulkProductAbstractCategory(array $productAbstractIds, string $localeName, string $storeName): array
     {
@@ -38,7 +38,7 @@ class ProductCategoryWidgetToProductCategoryStorageClientBridge implements Produ
      * @param array<int, \Generated\Shared\Transfer\ProductCategoryStorageTransfer> $productCategoryStorageTransfers
      * @param string $httpReferer
      *
-     * @return list<\Generated\Shared\Transfer\ProductCategoryStorageTransfer>
+     * @return array<\Generated\Shared\Transfer\ProductCategoryStorageTransfer>
      */
     public function filterProductCategoriesByHttpReferer(array $productCategoryStorageTransfers, string $httpReferer): array
     {
@@ -48,7 +48,7 @@ class ProductCategoryWidgetToProductCategoryStorageClientBridge implements Produ
     /**
      * @param array<int, \Generated\Shared\Transfer\ProductCategoryStorageTransfer> $productCategoryStorageTransfers
      *
-     * @return list<\Generated\Shared\Transfer\ProductCategoryStorageTransfer>
+     * @return array<\Generated\Shared\Transfer\ProductCategoryStorageTransfer>
      */
     public function sortProductCategories(array $productCategoryStorageTransfers): array
     {
