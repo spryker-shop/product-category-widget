@@ -13,17 +13,11 @@ use SprykerShop\Yves\ProductCategoryWidget\Dependency\Client\ProductCategoryWidg
 
 class ProductCategoryWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\ProductCategoryWidget\Dependency\Client\ProductCategoryWidgetToProductCategoryStorageClientInterface
-     */
     public function getProductCategoryStorageClient(): ProductCategoryWidgetToProductCategoryStorageClientInterface
     {
         return $this->getProvidedDependency(ProductCategoryWidgetDependencyProvider::CLIENT_PRODUCT_CATEGORY_STORAGE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\ProductCategoryWidget\Dependency\Client\ProductCategoryWidgetToStoreClientInterface
-     */
     public function getStoreClient(): ProductCategoryWidgetToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductCategoryWidgetDependencyProvider::CLIENT_STORE);

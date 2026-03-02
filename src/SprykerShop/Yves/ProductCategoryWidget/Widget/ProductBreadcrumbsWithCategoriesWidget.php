@@ -26,37 +26,22 @@ class ProductBreadcrumbsWithCategoriesWidget extends AbstractWidget
      */
     protected const PARAMETER_CATEGORIES = 'categories';
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     * @param string|null $httpReferer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer, ?string $httpReferer = null)
     {
         $this->addProductParameter($productViewTransfer);
         $this->addCategoriesParameter($this->getCategories($productViewTransfer, $httpReferer));
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'ProductBreadcrumbsWithCategoriesWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductCategoryWidget/views/product-detail-page-breadcrumb/product-detail-page-breadcrumb.twig';
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     protected function addProductParameter(ProductViewTransfer $productViewTransfer): void
     {
         $this->addParameter(static::PARAMETER_PRODUCT, $productViewTransfer);

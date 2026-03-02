@@ -16,26 +16,17 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class ProductSchemaOrgCategoryWidget extends AbstractWidget
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         $this->addParameter('product', $productViewTransfer)
             ->addParameter('categories', $this->getCategories($productViewTransfer));
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'ProductSchemaOrgCategoryWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@ProductCategoryWidget/views/product-detail-page-schema-org-category/product-detail-page-schema-org-category.twig';
