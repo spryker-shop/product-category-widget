@@ -12,10 +12,14 @@
         "spryker/transfer": "^3.27.0"
     },
     "require-dev": {
+        "spryker-shop/content-product-widget": "*",
         "spryker-shop/product-detail-page": "*",
-        "spryker/code-sniffer": "*"
+        "spryker/code-sniffer": "*",
+        "spryker/container": "*",
+        "spryker/testify": "*"
     },
     "suggest": {
+        "spryker-shop/content-product-widget": "If you want to use ContentProductAbstractCollectionExpanderPlugin (minimal required version is 1.4.0)",
         "spryker-shop/product-detail-page": "Widget plugins are available for this module."
     },
     "autoload": {
@@ -23,11 +27,16 @@
             "SprykerShop\\": "src/SprykerShop/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SprykerShopTest\\": "tests/SprykerShopTest/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/",
-        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/"
+        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/",
+        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/ tests/"
     },
     "extra": {
         "branch-alias": {

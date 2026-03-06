@@ -10,6 +10,8 @@ namespace SprykerShop\Yves\ProductCategoryWidget;
 use Spryker\Yves\Kernel\AbstractFactory;
 use SprykerShop\Yves\ProductCategoryWidget\Dependency\Client\ProductCategoryWidgetToProductCategoryStorageClientInterface;
 use SprykerShop\Yves\ProductCategoryWidget\Dependency\Client\ProductCategoryWidgetToStoreClientInterface;
+use SprykerShop\Yves\ProductCategoryWidget\Expander\ContentProductAbstractCategoryExpander;
+use SprykerShop\Yves\ProductCategoryWidget\Expander\ContentProductAbstractCategoryExpanderInterface;
 
 class ProductCategoryWidgetFactory extends AbstractFactory
 {
@@ -27,5 +29,13 @@ class ProductCategoryWidgetFactory extends AbstractFactory
     public function getStoreClient(): ProductCategoryWidgetToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductCategoryWidgetDependencyProvider::CLIENT_STORE);
+    }
+
+    public function createContentProductAbstractCategoryExpander(): ContentProductAbstractCategoryExpanderInterface
+    {
+        return new ContentProductAbstractCategoryExpander(
+            $this->getProductCategoryStorageClient(),
+            $this->getStoreClient(),
+        );
     }
 }
