@@ -3,6 +3,7 @@
 
     <transfer name="ProductView">
         <property name="idProductAbstract" type="int"/>
+        <property name="categories" type="Category[]" singular="category"/>
     </transfer>
 
     <transfer name="ProductAbstractCategoryStorage">
@@ -19,6 +20,10 @@
     </transfer>
 
     <transfer name="Store">
+        <property name="name" type="string"/>
+    </transfer>
+
+    <transfer name="Category">
         <property name="name" type="string"/>
     </transfer>
 
