@@ -24,7 +24,6 @@ use SprykerShop\Yves\ProductCategoryWidget\Expander\ContentProductAbstractCatego
  *
  * @group SprykerShop
  * @group Yves
- * @group Presentation
  * @group ProductCategoryWidget
  * @group Expander
  * @group ContentProductAbstractCategoryExpanderTest
@@ -32,9 +31,6 @@ use SprykerShop\Yves\ProductCategoryWidget\Expander\ContentProductAbstractCatego
  */
 class ContentProductAbstractCategoryExpanderTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testExpandReturnsSameCollectionWhenNoProductAbstracts(): void
     {
         // Arrange
@@ -58,9 +54,6 @@ class ContentProductAbstractCategoryExpanderTest extends Unit
         $this->assertSame($productViewTransferCollection, $result);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandAddsCategoriesToProductViewTransfer(): void
     {
         // Arrange
