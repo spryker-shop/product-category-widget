@@ -20,7 +20,7 @@ use SprykerShop\Yves\ContentProductWidget\Dependency\Plugin\ContentProductAbstra
 class ProductCategoryContentProductAbstractCollectionExpanderPlugin extends AbstractPlugin implements ContentProductAbstractCollectionExpanderPluginInterface
 {
     /**
-     * Specification:
+     * {@inheritDoc}
      * - Expands the product abstract view collection with main category per product.
      *
      * @api

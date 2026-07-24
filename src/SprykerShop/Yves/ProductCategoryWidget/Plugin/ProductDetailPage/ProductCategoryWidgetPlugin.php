@@ -19,16 +19,31 @@ use SprykerShop\Yves\ProductDetailPage\Dependency\Plugin\ProductCategoryWidget\P
  */
 class ProductCategoryWidgetPlugin extends AbstractWidgetPlugin implements ProductCategoryWidgetPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public static function getTemplate(): string
     {
         return ProductBreadcrumbsWithCategoriesWidget::getTemplate();
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $widget = new ProductBreadcrumbsWithCategoriesWidget($productViewTransfer);
